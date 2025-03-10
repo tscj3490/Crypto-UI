@@ -12,13 +12,15 @@ const ActionButtons: React.FC = () => {
   ];
 
   return (
-    <View className="flex-row justify-between px-4 py-3 grid grid-cols-4">
+    <View className="flex-row justify-between items-center px-4 py-3">
       {actions.map((action, index) => (
         <TouchableOpacity 
           key={index} 
-          className="items-center justify-center h-[70px] bg-gray-500/10 rounded-2xl mx-1"
+          className="flex items-center justify-center h-[70px] bg-gray-500/10 rounded-2xl mx-1 w-[23%]"
         >
-          <action.icon /> 
+          <View className='items-center'> 
+           <action.icon/> 
+          </View>
           <Text className="text-gray-400 mt-1 font-medium" style = {{ fontFamily: 'Inter, Roboto, Arial', fontSize: 13 }}>{action.label}</Text>
         </TouchableOpacity>
       ))}

@@ -66,9 +66,14 @@ const WalletScreen: React.FC = () => {
 
   return (
     <View className="flex-1 justify-center w-screen">
-       <LinearGradient
-        colors={['#0A3B29', '#0A2A1E', '#222222']}
-        locations={[0, 0.2, 0.4, 0.9]}
+       {/* <LinearGradient
+        colors={['#0A3B29', '#0A2A1E', '#0A1A24', '#0A1A24']}
+        locations={[0, 0.3, 0.6, 0.9]}
+        className="absolute top-0 left-0 right-0 bottom-0"
+      /> */}
+      <LinearGradient
+        colors={['#2a2a2a', '#2b2b2b', '#2c2c2c', '#2d2d2d']}
+        locations={[0, 0.3, 0.6, 0.9]}
         className="absolute top-0 left-0 right-0 bottom-0"
       />
       <AccountHeader accountName="Account 1" accountNumber={1} />
