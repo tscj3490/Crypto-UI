@@ -13,7 +13,7 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({ activeTab, onTabPress }) =>
     { name: 'grid', icon: 'grid' },
     { name: 'sync', icon: 'sync' },
     { name: 'time', icon: 'time' },
-    { name: 'information-circle', icon: 'information-circle' },
+    { name: 'information-Circle', icon: 'information-Circle' },
   ];
 
   return (

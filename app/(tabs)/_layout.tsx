@@ -8,6 +8,10 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import Feather from '@expo/vector-icons/Feather';
+import Octicons from '@expo/vector-icons/Octicons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -23,7 +27,10 @@ export default function TabLayout() {
         headerShadowVisible: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
-          backgroundColor: '#2b2b2b',
+          backgroundColor: '#222222',
+          display: 'flex',
+          flexDirection: 'column',
+          paddingTop:`${1}%`,
         }
       }}>
       <Tabs.Screen
@@ -31,7 +38,7 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={28} />
+            focused?  <MaterialIcons name="home-filled" size={24} color={color} /> : <Octicons name={"home"} size={20} color={color} />
           ),
         }}
       />
@@ -40,17 +47,18 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'grid' : 'grid-outline'} color={color} size={28} />
+            <Ionicons name={focused ? 'grid' : 'grid-outline'} color={color} size={20} />
           ),
         }}
+        
       />
       <Tabs.Screen
         name="swap"
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'sync' : 'sync-outline'} color={color} size={28} />
-          ),
+            <Feather name="repeat" size={20} color={color} />
+        ),
         }}
       />
       <Tabs.Screen
@@ -58,7 +66,7 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'time' : 'time-outline'} color={color} size={28} />
+            <MaterialCommunityIcons name={focused ?'clock': 'clock-outline' }  size={20} color={color} />
           ),
         }}
       />
@@ -67,7 +75,7 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={28}/>
+            <Ionicons name={focused ? 'search' : 'search-outline'} color={color} size={20}/>
           ),
         }}
       />

@@ -82,18 +82,18 @@ const CryptoAsset: React.FC<CryptoAssetProps> = ({
          {/* {renderPlaceholderIcon()} */}
 
           <View>
-            <Text className="text-white font-medium text-base bg-gray-700">{name}</Text>
-            <Text className="text-gray-500 text-xs">
+            <Text className="text-white font-medium text-base" style={{fontFamily: 'Inter'}} >{name}</Text>
+            <Text className="text-gray-500 text-xs" style={{fontFamily: 'Inter'}}>
               {amount.toLocaleString(undefined, { maximumFractionDigits: 6 })} {symbol}
             </Text>
           </View>
         </View>
         <View className="flex-row items-center">
           <View className="items-end">
-            <Text className="text-white font-medium text-base">
+            <Text className="text-white font-medium text-base" style={{fontFamily: 'Inter'}}>
               ${value.toFixed(2)}
             </Text>
-            <Text className={isPositive ? "text-green-500 text-xs" : "text-red-500 text-xs"}>
+            <Text className={isPositive ? "text-green-500 text-xs" : "text-red-500 text-xs"} style={{fontFamily: 'Inter'}}>
               {formattedChange}
             </Text>
           </View>

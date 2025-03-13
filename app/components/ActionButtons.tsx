@@ -21,7 +21,7 @@ const ActionButtons: React.FC = () => {
           <View className='items-center'> 
            <action.icon/> 
           </View>
-          <Text className="text-gray-400 mt-1 font-medium" style = {{ fontFamily: 'Inter, Roboto, Arial', fontSize: 13 }}>{action.label}</Text>
+          <Text className="text-gray-400 mt-1 font-medium" style = {{ fontFamily: 'Inter', fontSize: 13 }}>{action.label}</Text>
         </TouchableOpacity>
       ))}
     </View>

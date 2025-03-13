@@ -3,6 +3,7 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
+import { Text } from 'react-native';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
@@ -17,6 +18,8 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Inter: require('../assets/fonts/Inter-Regular.ttf'),
+    Roboto: require('../assets/fonts/Roboto-Regular.ttf'),
   });
 
   useEffect(() => {
@@ -26,7 +29,8 @@ export default function RootLayout() {
   }, [loaded]);
 
   if (!loaded) {
-    return null;
+    // return null;
+    return <Text>Font Loading...</Text>; 
   }
 
   return (

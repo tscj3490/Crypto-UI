@@ -1,3 +1,4 @@
+// import { StyleSheet } from 'nativewind';
 import React from 'react';
 import { View, Text } from 'react-native';
 
@@ -37,13 +38,30 @@ const BalanceDisplay: React.FC<BalanceDisplayProps> = ({
 
   return (
     <View className="items-center py-4 gap-y-1">
-      <Text className="text-white font-semibold" style ={{fontSize: 38, fontFamily: 'Inter, Roboto, Arial'}}>{formattedBalance}</Text>
-      <Text className="text-green-500 font-medium mt-1" style ={{fontSize: 18, fontFamily: 'Inter, Roboto, Arial'}}>
-        <Text className='font-semibold text-lg'>{formattedProfit} </Text>
-        <Text className='font-semibold bg-green-900/35 px-[3px] py-[1px] rounded-[5px]' style ={{ fontSize: 15, fontFamily: 'Inter, Roboto, Arial'}}>{formattedPercentage}</Text>
-      </Text>
+      <Text className="text-white font-semibold" style={{ fontFamily: 'Inter', fontSize: 38}}>{formattedBalance}</Text>
+      <View className="flex-row mt-1 text-center items-center">
+        <Text className='text-green-500 font-semibold' style={{fontFamily: 'Inter', fontSize: 18}}>{formattedProfit} </Text>
+        <View className='text-green-500 font-semibold bg-green-900/50 px-[5px] py-[5px] rounded-[5px]'>
+           <Text className='text-green-500 font-semibold' style={{fontFamily: 'Inter', fontSize: 16}}>{formattedPercentage}</Text>
+        </View>
+      </View>
     </View>
   );
 };
+
+// const styles =StyleSheet.create({
+//   balanceStyle:{
+//     fontFamily: 'Inter',
+//     fontSize: 38,
+//   },
+//   profitStyle:{
+//     fontFamily: 'Inter',
+//     fontSize: 18,
+//   },
+//   percentageStyle:{
+//     fontFamily: 'Inter',
+//     fontSize: 16,
+//   }
+// });
 
 export default BalanceDisplay; 
